@@ -5,7 +5,7 @@
 
 import 'package:flutter/material.dart';
 
-import './textOutput.dart';
+import './app.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,21 +34,7 @@ class _MyAppState extends State<MyApp> {
             child: Text('Assignment 1'),
           ),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              TextOutput(text),
-              RaisedButton(
-                onPressed: changeText,
-                child: Text('Click me!'),
-                padding: EdgeInsets.all(8.0),
-                color: Colors.black,
-                textColor: Colors.white,
-              ),
-            ],
-          ),
-        ),
+        body: App(text, changeText)
       ),
     );
   }
